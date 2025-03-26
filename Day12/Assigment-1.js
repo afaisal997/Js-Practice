@@ -14,4 +14,3 @@
 // Q10) WAP to check whether a number is palindrom or not
 // DONE
 
-// SUBMIT AT:- ducatindia681@gmail.com
