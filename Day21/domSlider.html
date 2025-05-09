@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .main {
+        height: 100vh;
+        width: 100vw;
+        display: grid;
+        place-items: center;
+        background-color: bisque;
+      }
+      .center {
+        height: 80%;
+        width: 80%;
+        position: relative;
+      }
+      .center img {
+        height: 100%;
+        width: 100%;
+      }
+      .center .btn {
+        position: absolute;
+        top: 45%;
+        border: none;
+        background: none;
+        color: white;
+        font-size: 70px;
+        cursor: pointer;
+      }
+      #btn1 {
+        left: 20px;
+      }
+      #btn2 {
+        right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="center">
+        <img src="../images/1.jpg" alt="Images" id="slider" />
+        <button type="button" class="btn" id="btn1">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <button type="button" class="btn" id="btn2">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
