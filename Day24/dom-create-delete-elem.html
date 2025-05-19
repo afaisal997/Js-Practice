@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        background-color: bisque;
+      }
+      .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        width: 80%;
+        height: 90%;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        gap: 10px;
+        margin: auto;
+      }
+      .first {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 10%;
+      }
+      .first button {
+        padding: 10px 30px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .first button:hover {
+        background-color: #0056b3;
+        box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.3);
+      }
+      .second {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+      }
+      .second p {
+        margin: 10px 0;
+        padding: 10px;
+        background-color: #dfdfdf;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="center">
+        <div class="first">
+          <button onclick="createItem()">Create</button>
+          <button onclick="deleteFirst()">Delete</button>
+          <button onclick="deleteAll()">Delete All</button>
+        </div>
+        <div class="second"></div>
+      </div>
+    </div>
+
+    <script>
+      let center = document.querySelector(".center");
+      let second = document.querySelector(".second");
+      let count = 1;
+
+      function createItem() {
+        let p = document.createElement("p");
+        p.innerText = `Item ${count}`;
+        p.id = `${count}`;
+        second.appendChild(p);
+        p.classList.add("item");
+        count++;
+      }
+      function deleteFirst() {
+        let firstItem = second.querySelector(".item");
+        if (firstItem) {
+          firstItem.remove();
+        } else {
+          alert("No items to delete");
+        }
+      }
+      function deleteAll() {
+        let items = second.querySelectorAll(".item");
+        if (items.length > 0) {
+          items.forEach((item) => item.remove());
+        } else {
+          alert("No items to delete");
+        }
+
+        // if (second.childNodes.length > 1) {
+        //   center.removeChild(second);
+        //   second = document.createElement("div");
+        //   second.classList.add("second");
+        //   center.appendChild(second);
+        // } else {
+        //   alert("No items to delete");
+        // }
+      }
+    </script>
+  </body>
+</html>
