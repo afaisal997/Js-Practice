@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./dom-keyboard-event.css" />
+  </head>
+  <body>
+    <h3 id="hname">Name</h3>
+    <h3 id="hemail">Email</h3>
+    <h3 id="haddress">Address</h3>
+    <div class="main">
+      <div class="center">
+        <form onsubmit="postData(event)">
+          <h2 class="head">Keyboard Event</h2>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter your name"
+            onkeydown="fun1(event)"
+            onkeypress="fun2(event)"
+            onchange="fun3(event)"
+          />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email"
+            onkeydown="fun1(event)"
+            onkeypress="fun2(event)"
+            onchange="fun3(event)"
+          />
+          <input
+            type="address"
+            name="address"
+            id="address"
+            placeholder="Enter your address"
+            onkeydown="fun1(event)"
+            onkeypress="fun2(event)"
+            onchange="fun3(event)"
+          />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="./dom-keyboard-event.js"></script>
+  </body>
+</html>
